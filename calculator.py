@@ -1,3 +1,5 @@
+"""The program utilises the tkinter module to createa a simple addition and minus graphical user interface calculator"""
+
 import tkinter as tk
 ## store calculator calculations
 calculation = ""
