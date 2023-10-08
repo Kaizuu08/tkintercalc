@@ -71,5 +71,11 @@ btn_plus.grid(row=2, column=4)
 btn_minus = tk.Button(root, text="-", command=lambda: add_to_calculation("-"), width=5, font=("Arial", 14))
 btn_minus.grid(row=3, column=4)
 
+btn_equals = tk.Button(root, text="=", command=evaluate_calculation, width=5, font=("Arial", 14))
+btn_equals.grid(row=4, column=4)
+
+btn_clear = tk.Button(root, text="C", command=clear_field, width=5, font=("Arial", 14)) #lambda is not needed as we are passing a function
+btn_clear.grid(row=5, column=1)
+
 ## runs the program window
 root.mainloop()
