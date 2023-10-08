@@ -2,8 +2,12 @@ import tkinter as tk
 ## store calculator calculations
 calculation = ""
 
+#function to calculate and text box display
 def add_to_calculation(symbol):
-    pass
+    global calculation
+    calculation += str(symbol)
+    text_result.delete(1.0, "end") #delets text result field
+    text_result.insert(1.0, calculation)
 
 def evaluate_calculation():
     pass
