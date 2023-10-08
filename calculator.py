@@ -2,18 +2,30 @@ import tkinter as tk
 ## store calculator calculations
 calculation = ""
 
-#function to calculate and text box display
+## function to calculate and text box display
 def add_to_calculation(symbol):
     global calculation
     calculation += str(symbol)
     text_result.delete(1.0, "end") #delets text result field
     text_result.insert(1.0, calculation)
 
+## function to evaluate 
 def evaluate_calculation():
-    pass
-
+    global calculation
+    try:
+        calculation = str(eval(calculation))
+        text_result.delete(1.0, "end")
+        text_result.insert(1.0, calculation)
+    except:
+        clear_field()
+        text_result.insert(1.0, "Error")
+        
+## function to clear field
 def clear_field():
-    pass
+    global calculation
+    calculation = ""
+    text_result.delete(1.0, "end")
+    
 
 root = tk.Tk()
 root.geometry("300x300")
