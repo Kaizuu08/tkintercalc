@@ -34,8 +34,8 @@ root.geometry("300x300")
 text_result = tk.Text(root, height = 2, width =16, font=("Arial",24))
 text_result.grid(columnspan = 5)
 
-## making the buttons
-btn_0 = tk.Button(root, text="0", command=lambda: add_to_calculation(0), width=5, font=("Arial", 14))
+## button interfaces
+btn_0 = tk.Button(root, text="0", command=lambda: add_to_calculation(0), width=5, font=("Arial", 14)) ## lambda allows number to be added to calculation
 btn_0.grid(row=3, column=1)
 
 btn_1 = tk.Button(root, text="1", command=lambda: add_to_calculation(1), width=5, font=("Arial", 14))
